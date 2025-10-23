@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Dom practice</title>
+    </head>
+    <body>
+        <p>Youtube Subscribe button</p>
+        <button onclick="function1();" class = "subscribe-button">Subscribe</button>
+        <script>
+            function function1(){
+                if(document.querySelector('.subscribe-button').innerHTML==="Subscribe")
+                document.querySelector('.subscribe-button').innerHTML = "Subscribed";
+                else
+                document.querySelector('.subscribe-button').innerHTML = "Subscribe";
+            }
+        </script>
+    </body>
+</html>

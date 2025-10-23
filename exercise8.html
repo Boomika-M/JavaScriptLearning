@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Exercise 8</title>
+    </head>
+    <body>
+        <script>
+            const product={name:"Basketball", price:2095};
+            console.log(product);
+            product.price+=500;
+            console.log(product);
+            product['delivery-time'] = '3 days';
+            console.log(product);
+
+            const pro1={name:"Shirt", price: 2000};
+            const pro2={name:"Shirt", price: 2000};
+            console.log(comparePrice(pro1,pro2));
+            console.log(isSameProduct(pro1,pro2));
+
+            function comparePrice(pro1,pro2){
+                if(pro1.price < pro2.price) return pro1;
+                else return pro2;
+            }
+
+            function isSameProduct(pro1,pro2){
+                return pro1.name === pro2.name && pro1.price === pro2.price;
+            }
+
+            console.log("GOOD MORNING".toLowerCase())
+            console.log("test".repeat(3));
+        </script>
+    </body>
+</html>

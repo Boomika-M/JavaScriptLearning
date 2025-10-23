@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Rock Paper Scissor</title>
+    </head>
+    <body>
+        <h1>Rock Paper Scissors</h1>
+        <button onclick = "
+        const rm=Math.random();
+        let cmove='';
+        if(rm>=0 && rm<1/3){ cmove='Rock'; }
+        else if(rm>=1/3 && rm<2/3) {cmove='Paper'; }
+        else if(rm>=2/3 && rm<1) {cmove='Scissor';} console.log(cmove);
+       
+        let res='';
+        if(cmove==='Rock') res='Tie.';
+        else if(cmove === 'Paper') res='You lose.';
+        else res='You win';
+        alert(`You picked Rock. Computer pick ${cmove}. ${res}`);">Rock</button>
+
+
+        <button onclick = "
+        const rm=Math.random();
+        let cmove='';
+        if(rm>=0 && rm<1/3){ cmove='Rock'; }
+        else if(rm>=1/3 && rm<2/3) {cmove='Paper'; }
+        else if(rm>=2/3 && rm<1) {cmove='Scissor';} console.log(cmove);
+       
+        let res='';
+        if(cmove==='Paper') res='Tie.';
+        else if(cmove === 'Scissor') res='You lose.';
+        else res='You win';
+        alert(`You picked Paper. Computer pick ${cmove}. ${res}`);">Paper</button>
+
+
+        <button onclick = "
+        const rm=Math.random();
+        let cmove='';
+        if(rm>=0 && rm<1/3){ cmove='Rock'; }
+        else if(rm>=1/3 && rm<2/3) {cmove='Paper'; }
+        else if(rm>=2/3 && rm<1) {cmove='Scissor';} console.log(cmove);
+       
+        let res='';
+        if(cmove==='Scissor') res='Tie.';
+        else if(cmove === 'Rock') res='You lose.';
+        else res='You win';
+        alert(`You picked Scissor. Computer pick ${cmove}. ${res}`);">Scissor</button>
+    </body>
+</html>

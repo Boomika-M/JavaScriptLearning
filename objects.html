@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Objects</title>
+    </head>
+    <body>
+        <script>
+            const pro={name:'shirt', 2: 5, rating:{count: 10, stars:4.5}, fun: function function1(){
+                console.log('hello world');
+            }};
+            console.log(pro['name']);
+            console.log(pro.rating.count);
+            pro.fun();
+
+            console.log(JSON.stringify(pro));
+            const jsonString = JSON.stringify(pro);
+            console.log(JSON.parse(jsonString));
+
+            console.log('hello'.length);
+            console.log('hello'.toUpperCase());
+
+            const o1={mess:"Good morning",
+            price:200
+            };
+            const o2=o1;
+            o1.mess="Good evening";
+            console.log(o1.mess);
+            console.log(o2.mess);
+            o2.mess="Good night";
+            console.log(o1.mess);
+
+            const {mess, price} = o2;
+            console.log(mess);
+            console.log(price);
+
+            const o3={mess,
+                method(){
+                    console.log('method');
+                }
+            };
+            console.log(o3);
+            o3.method();
+        </script>
+    </body>
+</html>
