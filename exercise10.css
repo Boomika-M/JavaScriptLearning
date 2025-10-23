@@ -1,0 +1,54 @@
+.game{
+    background-color: rgb(230,230,230);
+    color: black;
+    border: none;
+    font-weight: bold;
+    border-radius: 5px;
+    padding: 10px 15px;
+    margin-right: 10px;
+}
+.music{
+    background-color: rgb(230,230,230);
+    color: black;
+    border: none;
+    font-weight: bold;
+    border-radius: 5px;
+    padding: 10px 15px;
+    margin-right: 10px;
+}
+.tech{
+    background-color: rgb(230,230,230);
+    color: black;
+    border: none;
+    font-weight: bold;
+    border-radius: 5px;
+    padding: 10px 15px;
+    margin-right: 10px;
+}
+.gaming{
+    background-color: black;
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    margin-right: 10px;
+}
+.musician{
+    background-color: black;
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    margin-right: 10px;
+}
+.technologist{
+    background-color: black;
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    margin-right: 10px;
+}

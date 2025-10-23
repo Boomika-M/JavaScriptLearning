@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>DOM Projects</title>
+        <style>
+            body{
+                font-family: Arial;
+            }
+            .subscribe-button{
+                background-color: black;
+                color: white;
+                border-radius: 50px;
+                border: none;
+                padding-top: 10px;
+                padding-bottom: 10px;
+                padding-left: 15px;
+                padding-right: 15px;
+                font-weight: bold;
+                cursor: pointer;
+                margin-bottom: 30px;
+            }
+            .subscribed{
+                background-color: rgb(240,240,240);
+                color: black;
+
+            }
+            .input-box{
+                font-size: 15px;
+                padding: 10px;
+            }
+            .calculate-button{
+                font-size: 15px;
+                padding: 12px 15px;
+                background-color: green;
+                color: white;
+                border: none;
+                cursor: pointer;
+            }
+        </style>
+    </head>
+    <body>
+        <p>Youtube subscribe button</p>
+        <button onclick="subscribe();" class ="subscribe-button">Subscribe</button>
+        <p>Amazon Shipping Calculator<br><br>Orders under $40 = +$10 shipping.<br><br>Orders over $40 = FREE shipping.
+        </p>
+        <input class="input-box" type="number" placeholder="Cost of order" onkeydown = "if(event.key === 'Enter') calculate();">
+        <button onclick="calculate();" class="calculate-button">Calculate</button>
+        <p class="result"></p>
+        <script>
+            function subscribe(){
+                if(document.querySelector('.subscribe-button').innerHTML==="Subscribe"){
+                    document.querySelector('.subscribe-button').innerHTML = "Subscribed";
+                    document.querySelector('.subscribe-button').classList.add('subscribed');
+                }
+                else{
+                    document.querySelector('.subscribe-button').innerHTML = "Subscribe";
+                    document.querySelector('.subscribe-button').classList.remove('subscribed');
+                }
+            }
+            function calculate(){
+                let cost = Number(document.querySelector('input').value);
+                if(cost < 40)
+                cost += 10;
+                document.querySelector('.result').innerHTML = `$${cost}`;
+            }
+        </script>
+    </body>
+</html>

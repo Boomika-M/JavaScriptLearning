@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Calculator</title>
+        <style>
+            body{
+                background-color: black;
+                font-family: Arial;
+                color: white;
+            }
+            .number{
+                background-color: rgb(51,51,51);
+                height: 60px;
+                width: 60px;
+                border-radius: 60px;
+                font-size:26px;
+                color:white;
+                border:none;
+                margin-right:5px;
+                cursor: pointer;
+            }
+            .clear{
+                font-size: 17px;
+            }
+            .symbol{
+                background-color: rgb(254,160,10);
+                height: 60px;
+                width: 60px;
+                border-radius: 60px;
+                font-size:26px;
+                color:white;
+                border:none;
+                margin-right:5px;
+                cursor: pointer;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Calculator</h1>
+        <h2></h2>
+        <p>
+            <button onclick = "updateCalculation('1');" class="number">1</button> 
+            <button onclick = "updateCalculation('2');" class="number">2</button>
+            <button onclick = "updateCalculation('3');" class="number">3</button>
+            <button onclick = "updateCalculation(' + ');" class="symbol">+</button>
+            
+        </p>
+
+        <p>
+            <button onclick = "updateCalculation('4');" class="number">4</button> 
+            <button onclick = "updateCalculation('5');" class="number">5</button>
+            <button onclick = "updateCalculation('6');" class="number">6</button>
+            <button onclick = "updateCalculation(' - ');" class="symbol">-</button>
+        </p>
+
+        <p>
+            <button onclick = "updateCalculation('7');" class="number">7</button> 
+            <button onclick = "updateCalculation('8');" class="number">8</button>
+            <button onclick = "updateCalculation('9');" class="number">9</button>
+            <button onclick = "updateCalculation(' * ');" class="symbol">*</button>
+        </p> 
+        
+        <p>
+            <button onclick = "updateCalculation('0');" class="number">0</button> 
+            <button onclick = "updateCalculation('.');" class="number">.</button>
+            <button onclick = "updateCalculation('=');" class="number">=</button>
+            <button onclick = "updateCalculation(' / ');" class="symbol">/</button>
+        </p>        
+        <p>
+            <button onclick = "updateCalculation('');" class="number clear">Clear</button>
+        </p>
+        <script>
+            let calculation = JSON.parse(localStorage.getItem('calculation')) || '';
+            document.querySelector('h2').innerHTML=calculation;
+            console.log(calculation);
+            function updateCalculation(val){
+                if(val === '=') {
+                    calculation = eval(calculation);
+                    console.log(calculation);
+                }
+                else if(val === ''){
+                    calculation = '';
+                    localStorage.removeItem('calculation');
+                    console.log('Cleared.');
+                }
+                else{
+                    calculation += val;
+                    console.log(calculation);
+                } 
+                localStorage.setItem('calculation',JSON.stringify(calculation));
+                document.querySelector('h2').innerHTML = calculation;
+                
+            }
+        </script>
+    </body>
+</html>
